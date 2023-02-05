@@ -1,0 +1,267 @@
+body{
+    margin: auto;
+    padding: 1% 4%;
+    background-color: rgba(0, 0, 0, 0.055);
+    transition: 500ms ease;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 2rem;
+    z-index: 99;
+}
+.scroll-down .header {
+    transform: translate3d(0, -100%, 0);
+    transition: 500ms ease;
+}
+
+.scroll-up .header {
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 3px 30px black;
+    transition: 500ms ease;
+    background-color: rgba(0, 0, 0, 0.692);
+    color: white;
+}
+
+.scroll-up .nav a{
+    color: white;
+}
+
+.scroll-up .nav a:hover{
+    color: rgba(0, 0, 0, 0.651);
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.nav ul li{
+    display: inline-block;
+    padding-left: 3rem;
+}
+
+.nav a:hover{
+    color: hsl(0, 4%, 29%);
+}
+
+ul li{
+    list-style: none;
+}
+
+.ad1{
+    border: 1px solid black;
+    width: 80%;
+    height: 3vh;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.content{
+    padding: 50px 100px;
+}
+
+.content h1{
+    text-align: center;
+}
+
+.step-down{
+    margin-bottom: 10vh;
+}
+
+.related-news{
+    margin-bottom: 5rem;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.box img{
+    width: 100%;
+    height: 100%;
+}
+
+.box1{
+    width: 90%;
+    height: 500px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.box2{
+    width: 90%;
+    height: 500px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.box3{
+    width: 90%;
+    height: 500px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.box1 img{
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.box2 img{
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.box3 img{
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.content1 p{
+    width: 90%;
+    margin-top: 1rem;
+}
+
+.content2 p{
+    width: 90%;
+    margin-top: 1rem;
+}
+
+.content3 p{
+    width: 90%;
+    margin-top: 1rem;
+}
+
+.magnify{
+    overflow: hidden;
+}
+
+.magnify img{
+    transform: scale(1.1);
+    transition: 500ms ease;
+}
+
+.cols{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cols ul li{
+    margin-bottom: 10px;
+    padding: 7px 15px;
+    border: 1px solid black;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cols ul li:hover{
+    background-color: black;
+    color: white;
+}
+
+.heading-stick{
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.692);
+    color: white;
+    backdrop-filter: blur(10px);
+    box-shadow: 10px 10px 50px black;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    transition: 500ms ease;
+}
+
+.heading-stick-lower{
+    position: sticky;
+    top: 13%;
+    background-color: rgba(0, 0, 0, 0.692);
+    color: white;
+    backdrop-filter: blur(10px);
+    box-shadow: 10px 10px 50px black;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    transition: 500ms ease;
+}
+
+/* Footer style */
+
+.footer{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding-bottom: 100px;
+    margin-top: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-company{
+    padding-right: 2rem;
+}
+
+.footer p{
+    position: absolute;
+    width: 30%;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.col1, .col2, .col3 {
+    padding-left: 10rem;
+}
+
+.col1 ul li, .col2 ul li, .col3 ul li {
+    padding-bottom: .6em;
+}
+
+.footer-content ul li{
+    margin-left: -40px;
+}
+
+
+
+.footer a:hover{
+    color: rgb(77, 71, 71);
+}
+
+.copy{
+    text-align: center;
+}
+
+/* .container {
+    border: 3px solid black;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.item1, .item2, .item3 {
+    border: 3px solid black;
+    border-radius: 200px;
+    height: 10rem;
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item3 {
+    flex: 1;
+}
+
+.item1 {
+    flex: 1;
+} */
