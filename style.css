@@ -15,6 +15,7 @@ body{
     padding: 0 2rem;
     flex-wrap: nowrap;
     z-index: 99;
+    width: 100%;
 }
 
 .Logo {
@@ -45,7 +46,7 @@ body{
     }
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
     .Logo {
         flex: 1;
     }
@@ -55,14 +56,96 @@ body{
     }
 }
 
+
+
+.checkbtn {
+    position: absolute;
+    font-size: 30px;
+    display: block;
+    right: 20%;
+    cursor: pointer;
+    display: none;
+}
+
+.nav-mobile {
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+.contentH1-mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 480px) {
+    .checkbtn {
+        display: block;
+        z-index: 999;
+    }
+
+    .nav-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-mobile ul {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.692);
+        backdrop-filter: blur(100px);
+        -webkit-backdrop-filter: blur(100px);
+        top: 0;
+        left: -200%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    .nav-mobile ul li {
+        padding: 10% 0%;
+    }
+
+    .nav-mobile ul li a{
+        font-size: 20px;
+        color: white;
+    }
+
+    .nav-mobile a:hover {
+        color: rgba(0, 0, 0, 0.178);
+    }
+
+    #check:checked ~ .nav-mobile ul {
+        left: 0;
+    }
+
+    #check:checked ~ .checkbtn {
+        color: white;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .contentH1 {
+        display: none;
+    }
+
+    .contentH1-mobile {
+        display: block;
+    }
+}
+
 .scroll-down .header {
     transform: translate3d(0, -100%, 0);
     transition: 500ms ease;
 }
 
 .scroll-up .header {
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
     box-shadow: 0px 3px 30px black;
     transition: 500ms ease;
     background-color: rgba(0, 0, 0, 0.692);
@@ -224,7 +307,7 @@ ul li{
 
 .heading-stick-lower{
     position: sticky;
-    top: 14.5%;
+    top: 14%;
     background-color: rgba(0, 0, 0, 0.692);
     color: white;
     backdrop-filter: blur(10px);
@@ -237,8 +320,7 @@ ul li{
 
 .heading-stick-lower-responsive{
     position: sticky;
-    top: 21%;
-    content: "Some shit happened.";
+    top: 13%;
     background-color: rgba(0, 0, 0, 0.692);
     color: white;
     backdrop-filter: blur(10px);
@@ -247,7 +329,6 @@ ul li{
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     transition: 500ms ease;
-    height: 15vh;
 }
 
 /* Footer style */

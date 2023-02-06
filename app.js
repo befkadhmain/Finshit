@@ -2,6 +2,7 @@ let header = document.querySelector(".header")
 let scrollUp = document.querySelector(".scroll-up")
 let content = document.querySelector(".content")
 let contentH1 = document.querySelector(".content h1")
+let contentH1Mobile = document.querySelector(".contentH1-mobile")
 let image = document.querySelector(".photo")
 let firstColumn = document.querySelector(".first-col")
 let box1 = document.querySelector(".box1")
@@ -48,7 +49,6 @@ window.addEventListener('scroll', () => {
     if (currentScroll > lastscroll && !body.classList.contains("scroll-down")) {
         body.classList.remove("scroll-up")
         body.classList.add("scroll-down")
-        content.classList.add("step-down")
     }
 
     if (currentScroll  < lastscroll && body.classList.contains("scroll-down")) {
@@ -62,7 +62,6 @@ window.addEventListener('scroll', () => {
 
 //Making the header sticky when it reaches the top-most
 
-let clWidth = document.body.clientWidth
 window.addEventListener('scroll', () => {
 
     if (contentH1.offsetTop <= window.scrollY) {
@@ -78,18 +77,23 @@ window.addEventListener('scroll', () => {
         contentH1.classList.remove("heading-stick-lower")
     }
 })
-jQuery(document).ready(function($) {
-    var alterClass = function() {
-      var ww = document.body.clientWidth;
-      if (ww < 480) {
-        $('.contentH1').removeClass('heading-stick-lower');
-      } else if (ww >= 601) {
-        $('.contentH1').addClass('heading-stick-lower-responsive');
-      };
-    };
-    $(window).resize(function(){
-      alterClass();
-    });
-    //Fire it when the page first loads:
-    alterClass();
-  });
+
+window.addEventListener('scroll', () => {
+
+    if (contentH1Mobile.offsetTop <= window.scrollY) {
+        contentH1Mobile.classList.add("heading-stick")
+    }
+
+    if (body.classList.contains("scroll-up")) {
+        contentH1Mobile.classList.add("heading-stick-lower-responsive")
+    }
+
+    else if (contentH1Mobile.offsetTop > window.scrollY) {
+        contentH1Mobile.classList.remove("heading-stick")
+        contentH1Mobile.classList.remove("heading-stick-lower-responsive")
+    }
+})
+
+let checkBtn = document.querySelector(".checkbtn")
+
+checkBtn.classList.add("bdfilter")
