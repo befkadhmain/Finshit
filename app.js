@@ -35,10 +35,11 @@ let content3 = document.querySelector(".content3")
 
 // Making the header disappear when scrolled down and appear back when scrolled up at any position
 
-const body = document.body;
-let lastscroll = 0;
+const body = document.body
+let lastscroll = 0
 window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
+
+    const currentScroll = window.pageYOffset
 
     if (currentScroll <= 0) {
         body.classList.remove("scroll-up");
@@ -66,14 +67,22 @@ window.addEventListener('scroll', () => {
 
     if (contentH1.offsetTop <= window.scrollY) {
         contentH1.classList.add("heading-stick")
-        }
-    
+    }
+
     if (body.classList.contains("scroll-up")) {
-        contentH1.classList.remove("heading-stick")
         contentH1.classList.add("heading-stick-lower")
     }
 
-    else {
+    else if (contentH1.offsetTop > window.scrollY) {
+        contentH1.classList.remove("heading-stick")
         contentH1.classList.remove("heading-stick-lower")
     }
 })
+
+if (clWidth <= 480) {
+    contentH1.classList.add("heading-stick-lower-responsive")
+}
+
+else if (clWidth > 480) {
+    contentH1.classList.remove("heading-stick-lower-responsive")
+}
