@@ -16,6 +16,65 @@ body{
     padding: 0 2rem;
     z-index: 99;
 }
+
+.Logo {
+    flex: 1;
+}
+
+.nav {
+    flex: 1;
+}
+
+@media screen and (max-width: 850px) {
+    .Logo {
+        flex: 2;
+    }
+    
+    .nav {
+        flex: 3;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .Logo {
+        flex: 1;
+    }
+
+    .nav {
+        flex: -1;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Logo {
+        flex: 1;
+    }
+
+    .nav {
+        flex: 9;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        height: 20vh;
+    }
+
+    .nav {
+        position: absolute;
+        left: 0;
+        top: 3.5rem;
+        width: 100%;
+    }
+
+    .footer {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
 .scroll-down .header {
     transform: translate3d(0, -100%, 0);
     transition: 500ms ease;
@@ -64,7 +123,7 @@ ul li{
 }
 
 .content{
-    padding: 50px 100px;
+    padding: 5% 10%;
 }
 
 .content h1{
@@ -183,7 +242,19 @@ ul li{
 
 .heading-stick-lower{
     position: sticky;
-    top: 13%;
+    top: 14.5%;
+    background-color: rgba(0, 0, 0, 0.692);
+    color: white;
+    backdrop-filter: blur(10px);
+    box-shadow: 10px 10px 50px black;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    transition: 500ms ease;
+}
+
+.heading-stick-lower-responsive{
+    position: sticky;
+    top: 21%;
     background-color: rgba(0, 0, 0, 0.692);
     color: white;
     backdrop-filter: blur(10px);
@@ -216,6 +287,7 @@ ul li{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    font-size: 15px;
 }
 
 .col1, .col2, .col3 {

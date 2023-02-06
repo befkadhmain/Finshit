@@ -61,17 +61,19 @@ window.addEventListener('scroll', () => {
 
 //Making the header sticky when it reaches the top-most
 
+let clWidth = document.body.clientWidth
 window.addEventListener('scroll', () => {
-  if (contentH1.offsetTop <= window.scrollY) {
-    contentH1.classList.add("heading-stick")
-  }
 
-  if (body.classList.contains("scroll-up")) {
-    contentH1.classList.remove("heading-stick")
-    contentH1.classList.add("heading-stick-lower")
-  }
+    if (contentH1.offsetTop <= window.scrollY) {
+        contentH1.classList.add("heading-stick")
+        }
+    
+    if (body.classList.contains("scroll-up")) {
+        contentH1.classList.remove("heading-stick")
+        contentH1.classList.add("heading-stick-lower")
+    }
 
-  else {
-    contentH1.classList.remove("heading-stick-lower")
-  }
-});
+    else {
+        contentH1.classList.remove("heading-stick-lower")
+    }
+})
