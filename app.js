@@ -78,11 +78,18 @@ window.addEventListener('scroll', () => {
         contentH1.classList.remove("heading-stick-lower")
     }
 })
-
-if (clWidth <= 480) {
-    contentH1.classList.add("heading-stick-lower-responsive")
-}
-
-else if (clWidth > 480) {
-    contentH1.classList.remove("heading-stick-lower-responsive")
-}
+jQuery(document).ready(function($) {
+    var alterClass = function() {
+      var ww = document.body.clientWidth;
+      if (ww < 480) {
+        $('.contentH1').removeClass('heading-stick-lower');
+      } else if (ww >= 601) {
+        $('.contentH1').addClass('heading-stick-lower-responsive');
+      };
+    };
+    $(window).resize(function(){
+      alterClass();
+    });
+    //Fire it when the page first loads:
+    alterClass();
+  });
