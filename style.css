@@ -89,6 +89,7 @@ body{
         display: flex;
         justify-content: center;
         align-items: center;
+        text-align: center;
     }
 
     .nav-mobile ul {
@@ -100,7 +101,6 @@ body{
         -webkit-backdrop-filter: blur(100px);
         top: 0;
         left: -200%;
-        text-align: center;
         transition: all .5s;
     }
 
@@ -320,7 +320,7 @@ ul li{
 
 .heading-stick-lower-responsive{
     position: sticky;
-    top: 13%;
+    top: 21%;
     background-color: rgba(0, 0, 0, 0.692);
     color: white;
     backdrop-filter: blur(10px);
