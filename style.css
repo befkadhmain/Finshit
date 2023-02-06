@@ -247,6 +247,7 @@ ul li{
     background-color: rgba(0, 0, 0, 0.692);
     color: white;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     box-shadow: 10px 10px 50px black;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
@@ -259,6 +260,7 @@ ul li{
     background-color: rgba(0, 0, 0, 0.692);
     color: white;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     box-shadow: 10px 10px 50px black;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
@@ -271,6 +273,7 @@ ul li{
     background-color: rgba(0, 0, 0, 0.692);
     color: white;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     box-shadow: 10px 10px 50px black;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
