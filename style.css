@@ -122,7 +122,7 @@ body{
     }
 
     #check:checked ~ .nav-mobile ul {
-        left: 0;
+        left: -5%;
     }
 
     #check:checked ~ .checkbtn {
