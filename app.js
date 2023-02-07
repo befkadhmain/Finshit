@@ -72,9 +72,12 @@ window.addEventListener('scroll', () => {
         contentH1.classList.add("heading-stick-lower")
     }
 
-    else if (contentH1.offsetTop > window.scrollY) {
-        contentH1.classList.remove("heading-stick")
+    if (!body.classList.contains("scroll-up")) {
         contentH1.classList.remove("heading-stick-lower")
+    }
+
+    else {
+        contentH1.classList.remove("heading-stick")
     }
 })
 
@@ -88,9 +91,12 @@ window.addEventListener('scroll', () => {
         contentH1Mobile.classList.add("heading-stick-lower-responsive")
     }
 
-    else if (contentH1Mobile.offsetTop > window.scrollY) {
-        contentH1Mobile.classList.remove("heading-stick")
+    if (!body.classList.contains("scroll-up")) {
         contentH1Mobile.classList.remove("heading-stick-lower-responsive")
+    }
+
+    else {
+        contentH1Mobile.classList.remove("heading-stick")
     }
 })
 
