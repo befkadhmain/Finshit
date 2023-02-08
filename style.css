@@ -167,6 +167,12 @@ body{
     }
 }
 
+@media only screen and (max-width: 450px){
+    .footer-content {
+        margin-left: 15%;
+    }
+}
+
 .scroll-down .header {
     transform: translate3d(0, -100%, 0);
     transition: 500ms ease;
