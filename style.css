@@ -83,7 +83,32 @@ body{
     display: none;
 }
 
+@media only screen and (max-width: 670px) {
+    .wrapper {
+        flex-wrap: wrap;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+    }
+
+    .footer-content {
+        margin-left: 30%;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .footer-content {
+        margin-left: 10%;
+    }
+}
+
 @media only screen and (max-width: 480px) {
+
+    .footer-content {
+        margin-left: 20%;
+    }
+
     .checkbtn {
         display: block;
         z-index: 999;
@@ -122,7 +147,7 @@ body{
     }
 
     #check:checked ~ .nav-mobile ul {
-        left: -5%;
+        left: -4%;
     }
 
     #check:checked ~ .checkbtn {
@@ -153,9 +178,10 @@ body{
     box-shadow: 0px 3px 30px black;
     transition: 500ms ease;
     background-color: rgba(0, 0, 0, 0.692);
+    color: white;
 }
 
-.scroll-up .nav a, .scroll-up .Logo a{
+.scroll-up .nav a, .scroll-up .Logo a {
     color: white;
 }
 
@@ -310,7 +336,7 @@ ul li{
 
 .heading-stick-lower{
     position: sticky;
-    top: 14%;
+    top: 13%;
     background-color: rgba(0, 0, 0, 0.692);
     color: white;
     backdrop-filter: blur(10px);
@@ -323,7 +349,7 @@ ul li{
 
 .heading-stick-lower-responsive{
     position: sticky;
-    top: 21%;
+    top: 8%;
     background-color: rgba(0, 0, 0, 0.692);
     color: white;
     backdrop-filter: blur(10px);
